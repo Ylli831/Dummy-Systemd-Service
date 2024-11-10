@@ -1,0 +1,16 @@
+[Unit]
+Description=Dummy Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/dummy.sh
+Restart=always
+User=root
+Group=root
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=dummy-service
+
+[Install]
+WantedBy=multi-user.target
+
